@@ -1,5 +1,4 @@
- 
-#Digital wall-calendar
+ # Digital wall-calendar
 A sophisticated, highly interactive React-based wall calendar featuring dynamic theme switching, date range selection, and integrated Indian Government holidays. Designed with a focus on minimalist aesthetics and smooth user experience.
 
 **✨ [Live Demo](https://wall-calendar-five-theta.vercel.app/)**
