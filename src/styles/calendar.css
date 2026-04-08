@@ -34,40 +34,15 @@
   --holiday-red: #ff5252; 
 }
 
+.theme-dark .day-header { color: #ffffff; }
+.theme-dark .day-header:nth-child(7) { color: var(--holiday-red); }
+.theme-dark .range-bar { color: #ffffff; background: rgba(255, 255, 255, 0.05); }
+.theme-dark .notes-title, .theme-dark .notes-subtitle { color: #ffffff; }
+.theme-dark .note-textarea::placeholder { color: rgba(255, 255, 255, 0.5); }
+.theme-dark .save-btn { color: #ffffff; border-color: rgba(255, 255, 255, 0.2); }
+.theme-dark .day-cell.today::after { background: var(--accent); }
 
-.theme-dark .day-header {
-  color: #ffffff; 
-}
-
-.theme-dark .day-header:nth-child(7) {
-  color: var(--holiday-red); 
-}
-
-.theme-dark .range-bar {
-  color: #ffffff; 
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.theme-dark .notes-title, 
-.theme-dark .notes-subtitle {
-  color: #ffffff; 
-}
-
-.theme-dark .note-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5); 
-}
-
-.theme-dark .save-btn {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-
-.theme-dark .day-cell.today::after {
-  background: var(--accent);
-}
-
-
+/* CORE STYLES */
 *, *::before, *::after { 
   box-sizing: border-box; 
   margin: 0; 
@@ -138,7 +113,7 @@
 @keyframes slideOutLeft { to { opacity: 0; transform: translateX(-40px) scale(0.97); } }
 @keyframes slideOutRight { to { opacity: 0; transform: translateX(40px) scale(0.97); } }
 
-/*  IMAGE SECTION */
+/* IMAGE SECTION */
 .img-section { 
   position: relative; 
   height: 200px; 
@@ -204,7 +179,6 @@
 .day-cell:hover:not(.empty) { background: var(--border); }
 .day-cell.today { font-weight: 700; color: var(--accent); }
 
-
 .day-cell.range-start, .day-cell.range-end { background: var(--accent) !important; color: white !important; z-index: 2; }
 .day-cell.in-range { background: var(--accent-soft); border-radius: 0; }
 
@@ -212,7 +186,6 @@
 .day-cell.holiday-day { 
   color: var(--holiday-red); 
 }
-
 
 .day-cell.range-start, .day-cell.range-end { color: white; }
 
@@ -305,4 +278,53 @@
   background: #4a8a4a; 
   color: white;
   border-color: transparent;
+}
+
+/* Responsiveness*/
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  .cal-body {
+    grid-template-columns: 1fr; /* Stack Sidebar below Grid */
+  }
+
+  .grid-section {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .img-section {
+    height: 160px;
+  }
+
+  .spiral {
+    gap: 12px;
+  }
+
+  .spiral-dot {
+    width: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .month-year {
+    font-size: 24px;
+  }
+  
+  .day-cell {
+    font-size: 10px;
+  }
+
+  .day-header {
+    font-size: 9px;
+  }
+  
+  .nav-btn {
+    width: 30px;
+    height: 30px;
+  }
 }
