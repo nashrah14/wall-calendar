@@ -1,5 +1,5 @@
 <div align = "center" 
-  <h1><b>  Digital wall-calendar</b></h1>
+  # Digital wall-calendar
 </div>
 A sophisticated, highly interactive React-based wall calendar featuring dynamic theme switching, date range selection, and integrated Indian Government holidays. Designed with a focus on minimalist aesthetics and smooth user experience.
 
