@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+dist/
+build/
+
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.suap
+*.sublime-project
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
